@@ -29,8 +29,44 @@ Don't forget to change your build system settings make it able to recognize them
 
 ## Usage
 
+Using 595 driver.
+
+  * Schematic 
+
+![595 shcematic](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/595-schematic.png)
+
+  * Breadboard
+
+![595 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/595-bread.png)
+
+The following code should drive these boards:
+
+```c
+#include "shiftout.h"
+#include "lcdshift.h"
+
+int main(void) {
+  /* Our shift ic */
+  ShiftIC icS;
+
+  /* LCD object */
+  ShiftLCD lcd;
+
+  createShift(&icS, &DDRD, &PORTD, PORTD0, PORTD1, PORTD2);
+
+  /* Type of driver must be specified explicitly *
+  icS.type = IC_TYPE_HC595;
+
+  /* Lets create it */
+  createShiftLCD(&lcd, &icS, 1, 3, 4, 5, 6, 7, 16, 2, 0);
 
 
+  /* Ta-da ! */
+  shiftLCDPuts(&lcd, "hello");
+
+  return 0;
+}
+```
 
 ## API
 
