@@ -6,7 +6,7 @@ Three wire LCD driver support for AVR using 74hc595 or 74hc164.
 
 ## Why ?
   I couldn't find any code for LCD with shift driver for `avr-gcc`. Then I've decided to
-  make an own with small codebase, multiple displays and different driver ICs support.
+  make an own with a small codebase, multiple displays and different driver ICs support.
 
 ## Features
 
@@ -22,16 +22,16 @@ Three wire LCD driver support for AVR using 74hc595 or 74hc164.
 
 ## Installation
 
-The driver depends on [shiftout](https://github.com/linuxenko/avr-shiftout) library, that you can 
+  * The driver depends on [shiftout](https://github.com/linuxenko/avr-shiftout) library, that you can 
 simple copy into your project's folder.
-Then copy source files of this project.
-Don't forget to change your build system's settings make it able to recognize them.
+  * Then copy source files of this project.
+  * Don't forget to change your build system's settings make it able to recognize them.
 
 ## Usage
 
 Using 595 driver.
 
-  * Schematic 
+  * Schematic
 
 ![595 shcematic](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/595-schematic.png)
 
@@ -39,7 +39,7 @@ Using 595 driver.
 
 ![595 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/595-bread.png)
 
-The following code should drive these boards:
+The following code should be able to drive such boards:
 
 ```c
 #include "shiftout.h"
@@ -67,7 +67,7 @@ int main(void) {
 }
 ```
 
-The same using 74hc164
+The same, this time using 74hc164
 
 ![164 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/164-schematic.png)
 
