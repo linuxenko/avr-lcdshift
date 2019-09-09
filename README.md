@@ -25,7 +25,7 @@ Three wire LCD driver support for AVR using 74hc595 or 74hc164.
 The driver depends on [shiftout](https://github.com/linuxenko/avr-shiftout) library, that you can 
 simple copy into your project's folder.
 Then copy source files of this project.
-Don't forget to change your build system settings make it able to recognize them.
+Don't forget to change your build system's settings make it able to recognize them.
 
 ## Usage
 
