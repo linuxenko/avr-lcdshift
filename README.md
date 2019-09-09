@@ -1,2 +1,1 @@
-# avr-lcdshift
-Liquid crystal display with shift driver support for AVR
+## LCD with shift driver support for AVR
