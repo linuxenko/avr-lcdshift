@@ -54,12 +54,41 @@ int main(void) {
 
   createShift(&icS, &DDRD, &PORTD, PORTD0, PORTD1, PORTD2);
 
-  /* Type of driver must be specified explicitly *
+  /* Type of driver must be specified explicitly */
   icS.type = IC_TYPE_HC595;
 
   /* Lets create it */
   createShiftLCD(&lcd, &icS, 1, 3, 4, 5, 6, 7, 16, 2, 0);
 
+  /* Ta-da ! */
+  shiftLCDPuts(&lcd, "hello");
+
+  return 0;
+}
+```
+
+The same using 74hc164
+
+![164 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/164-schematic.png)
+
+```c
+#include "shiftout.h"
+#include "lcdshift.h"
+
+int main(void) {
+  /* Our shift ic */
+  ShiftIC icS;
+
+  /* LCD object */
+  ShiftLCD lcd;
+
+  createShift(&icS, &DDRD, &PORTD, PORTD0, PORTD1, PORTD2);
+
+  /* Type of driver must be specified explicitly */
+  icS.type = IC_TYPE_HC164;
+
+  /* Lets create it */
+  createShiftLCD(&lcd, &icS, 4, 5, 0, 1, 2, 3, 16, 2, 0);
 
   /* Ta-da ! */
   shiftLCDPuts(&lcd, "hello");
