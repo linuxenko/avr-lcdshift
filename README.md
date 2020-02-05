@@ -33,11 +33,11 @@ Using 595 driver.
 
   * Schematic
 
-![595 shcematic](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/595-schematic.png)
+![595 shcematic](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/master/schematic/595-schematic.png)
 
   * Breadboard
 
-![595 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/595-bread.png)
+![595 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/master/schematic/595-bread.png)
 
 The following code should be able to drive such boards:
 
@@ -69,7 +69,7 @@ int main(void) {
 
 The same, this time using 74hc164
 
-![164 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/dev/schematic/164-schematic.png)
+![164 breadboard](https://raw.githubusercontent.com/linuxenko/avr-lcdshift/master/schematic/164-schematic.png)
 
 ```c
 #include "shiftout.h"
